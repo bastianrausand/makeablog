@@ -8,7 +8,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Makeablog</a>
+      <%= link_to 'Makeablog', root_path, class:"navbar-brand"  %>
+     
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -17,9 +18,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Contact us <span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
+            <li><a href="https://www.facebook.com/bastian.rausand?sw_fnr_id=1598027409&fnr_t=0">Facebook</a></li>
+            <li><a href="https://twitter.com/BastianRausand">Twitter</a></li>
             <li role="separator" class="divider"></li>
             <li><a href="#">Phone number: +47 46 97 60 40</a></li>
           </ul>
@@ -40,7 +40,7 @@
             <%= link_to "Sign in", new_user_session_path %>
         </li>
         <% else %>
-        <li><a href="#">Create a blog here</a></li>
+        <li><%= link_to 'Create a blog', new_blog_path %></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><%= current_user.email %> <span class="caret"></span></a>
           <ul class="dropdown-menu">
